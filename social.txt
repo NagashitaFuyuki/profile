@@ -1,8 +1,8 @@
-facebook | Facebook | https://facebook.com/nagashitafuyuki | Nagashita Fuyuki
-youtube | YouTube | https://youtube.com/@nagashitafuyuki | Nagashita Fuyuki
-steam | Steam | https://steamcommunity.com/profiles/76561199244163472/ | Nagashita Fuyuki
-epic | Epic Games | https://store.epicgames.com/u/nagashitafuyuki | Nagashita Fuyuki
-x | X | https://x.com/NagashitaFuyuki | Nagashita Fuyuki
-twitch | Twitch | https://twitch.tv/nagashitafuyuki | Nagashita Fuyuki
-github | GitHub | https://github.com/nagashitafuyuki | Nagashita Fuyuki
-discord | Discord | https://discord.com/users/700149641403957349 | Nagashita Fuyuki
+Facebook | https://facebook.com/nagashitafuyuki | Nagashita Fuyuki | assets/social/facebook.png
+YouTube | https://youtube.com/@nagashitafuyuki | Nagashita Fuyuki | assets/social/youtube.png
+Steam | https://steamcommunity.com/profiles/76561199244163472/ | Nagashita Fuyuki | assets/social/steam.png
+Epic Games | https://store.epicgames.com/u/nagashitafuyuki | Nagashita Fuyuki | assets/social/epic.png
+X | https://x.com/NagashitaFuyuki | Nagashita Fuyuki | assets/social/x.png
+Twitch | https://twitch.tv/nagashitafuyuki | Nagashita Fuyuki | assets/social/twitch.png
+GitHub | https://github.com/nagashitafuyuki | Nagashita Fuyuki | assets/social/github.png
+Discord | https://discord.com/users/700149641403957349 | Nagashita Fuyuki | assets/social/discord.png

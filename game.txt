@@ -1,10 +1,10 @@
-Strinova - APAC - Fuyuki/2338894
-GI - ASIA - 821913008
-HSR - ASIA - 802186409
-ZZZ - ASIA - 1300360900
-HI3 - SEA - 19571141
-WuWa - SEA - 902325263
-A9E - ASIA - 4188693877
-NTE - SEA - 218215404445
-Nikke - SEA - 06120920
-BA - SEA - AYYORDSP
+Strinova | APAC | Fuyuki/2338894 | assets/games/strinova.png
+Genshin Impact | ASIA | 821913008 | assets/games/genshin.png
+Honkai: Star Rail | ASIA | 802186409 | assets/games/hsr.png
+Zenless Zone Zero | ASIA | 1300360900 | assets/games/zzz.png
+Honkai Impact 3 | SEA | 19571141 | assets/games/honkai3.png
+Wuthering Waves | SEA | 902325263 | assets/games/wutheringwaves.png
+Arknights Endfield | ASIA | 4188693877 | assets/games/a9e.png
+Neverness to Everness | SEA | 218215404445 | assets/games/nte.png
+Nikke | SEA | 06120920 | assets/games/nikke.png
+Blue Archive | SEA | AYYORDSP | assets/games/ba.png

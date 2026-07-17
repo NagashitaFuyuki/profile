@@ -1,65 +1,32 @@
-const GAME_META = {
-  strinova: { title: "Strinova", icon: "assets/games/strinova.png" },
-  gi: { title: "Genshin Impact", icon: "assets/games/genshin.png" },
-  hsr: { title: "Honkai: Star Rail", icon: "assets/games/hsr.png" },
-  zzz: { title: "Zenless Zone Zero", icon: "assets/games/zzz.png" },
-  hi3: { title: "Honkai Impact 3", icon: "assets/games/honkai3.png" },
-  wuwa: { title: "Wuthering Waves", icon: "assets/games/wutheringwaves.png" },
-  a9e: { title: "Arknights Endfield", icon: "assets/games/a9e.png" },
-  nte: { title: "Neverness to Everness", icon: "assets/games/nte.png" },
-  nikke: { title: "Nikke", icon: "assets/games/nikke.png" },
-  ba: { title: "Blue Archive", icon: "assets/games/ba.png" },
-};
-
-const SOCIAL_META = {
-  facebook: { title: "Facebook", icon: "assets/social/facebook.png" },
-  youtube: { title: "YouTube", icon: "assets/social/youtube.png" },
-  steam: { title: "Steam", icon: "assets/social/steam.png" },
-  epicgames: { title: "Epic Games", icon: "assets/social/epic.png" },
-  epic: { title: "Epic Games", icon: "assets/social/epic.png" },
-  x: { title: "X", icon: "assets/social/x.png" },
-  twitter: { title: "X", icon: "assets/social/x.png" },
-  twitch: { title: "Twitch", icon: "assets/social/twitch.png" },
-  github: { title: "GitHub", icon: "assets/social/github.png" },
-  discord: { title: "Discord", icon: "assets/social/discord.png" },
-};
-
 const GAME_FALLBACK = [
-  "Strinova - APAC - Fuyuki/2338894",
-  "GI - ASIA - 821913008",
-  "HSR - ASIA - 802186409",
-  "ZZZ - ASIA - 1300360900",
-  "HI3 - SEA - 19571141",
-  "WuWa - SEA - 902325263",
-  "A9E - ASIA - 4188693877",
-  "NTE - SEA - 218215404445",
-  "Nikke - SEA - 06120920",
-  "BA - SEA - AYYORDSP",
+  "Strinova | APAC | Fuyuki/2338894 | assets/games/strinova.png",
+  "Genshin Impact | ASIA | 821913008 | assets/games/genshin.png",
+  "Honkai: Star Rail | ASIA | 802186409 | assets/games/hsr.png",
+  "Zenless Zone Zero | ASIA | 1300360900 | assets/games/zzz.png",
+  "Honkai Impact 3 | SEA | 19571141 | assets/games/honkai3.png",
+  "Wuthering Waves | SEA | 902325263 | assets/games/wutheringwaves.png",
+  "Arknights Endfield | ASIA | 4188693877 | assets/games/a9e.png",
+  "Neverness to Everness | SEA | 218215404445 | assets/games/nte.png",
+  "Nikke | SEA | 06120920 | assets/games/nikke.png",
+  "Blue Archive | SEA | AYYORDSP | assets/games/ba.png",
 ];
 
 const SOCIAL_FALLBACK = [
-  "facebook | Facebook | https://facebook.com/nagashitafuyuki",
-  "youtube | YouTube | https://youtube.com/@nagashitafuyuki",
-  "steam | Steam | https://steamcommunity.com/profiles/76561199244163472/",
-  "epic | Epic Games | https://store.epicgames.com/u/nagashitafuyuki",
-  "x | X | https://x.com/NagashitaFuyuki",
-  "twitch | Twitch | https://twitch.tv/nagashitafuyuki",
-  "github | GitHub | https://github.com/nagashitafuyuki",
-  "discord | Discord | https://discord.com/users/700149641403957349",
+  "Facebook | https://facebook.com/nagashitafuyuki | Nagashita Fuyuki | assets/social/facebook.png",
+  "YouTube | https://youtube.com/@nagashitafuyuki | Nagashita Fuyuki | assets/social/youtube.png",
+  "Steam | https://steamcommunity.com/profiles/76561199244163472/ | Nagashita Fuyuki | assets/social/steam.png",
+  "Epic Games | https://store.epicgames.com/u/nagashitafuyuki | Nagashita Fuyuki | assets/social/epic.png",
+  "X | https://x.com/NagashitaFuyuki | Nagashita Fuyuki | assets/social/x.png",
+  "Twitch | https://twitch.tv/nagashitafuyuki | Nagashita Fuyuki | assets/social/twitch.png",
+  "GitHub | https://github.com/nagashitafuyuki | Nagashita Fuyuki | assets/social/github.png",
+  "Discord | https://discord.com/users/700149641403957349 | Nagashita Fuyuki | assets/social/discord.png",
 ];
 
-const GEAR_META = {
-  mouse: { title: "Mouse", icon: "assets/gear/mouse.png" },
-  keyboard: { title: "Keyboard", icon: "assets/gear/keyboard.png" },
-  headphone: { title: "Headphone", icon: "assets/gear/headphone.png" },
-  gamepad: { title: "Gamepad", icon: "assets/gear/gamepad.png" },
-};
-
 const GEAR_FALLBACK = [
-  "Mouse: Attack shark x11",
-  "Keyboard: DareU EK87 Black (Multi-LED)",
-  "Headphone: Moxpad x3",
-  "Gamepad: Gamesir Nova 2 Lite",
+  "Mouse | Attack shark x11 | assets/gear/mouse.png",
+  "Keyboard | DareU EK87 Black (Multi-LED) | assets/gear/keyboard.png",
+  "Headphone | Moxpad x3 | assets/gear/headphone.png",
+  "Gamepad | Gamesir Nova 2 Lite | assets/gear/gamepad.png",
 ];
 
 const socialGrid = document.getElementById("social-grid");
@@ -70,43 +37,29 @@ const template = document.getElementById("game-card-template");
 const gearTemplate = document.getElementById("gear-card-template");
 const toast = document.getElementById("toast");
 
-function normalizeKey(value) {
-  return String(value || "").trim().toLowerCase().replace(/[^a-z0-9]/g, "");
-}
-
 function parseLine(line) {
-  const parts = line.split("-").map((part) => part.trim()).filter(Boolean);
+  const parts = line.split("|").map((part) => part.trim()).filter(Boolean);
   if (parts.length < 3) return null;
 
-  const [rawName, server, ...uidParts] = parts;
-  const uid = uidParts.join(" - ").trim();
-  const meta = GAME_META[normalizeKey(rawName)] || {
-    title: rawName,
-    icon: "assets/avatar.png",
-  };
+  const [title, server, uid, icon] = parts;
 
   return {
-    title: meta.title,
-    icon: meta.icon,
+    title,
+    icon: icon || "assets/avatar.png",
     server,
     uid,
   };
 }
 
 function parseGearLine(line) {
-  const parts = line.split(":");
+  const parts = line.split("|").map((part) => part.trim()).filter(Boolean);
   if (parts.length < 2) return null;
 
-  const rawName = parts.shift().trim();
-  const value = parts.join(":").trim();
-  const meta = GEAR_META[normalizeKey(rawName)] || {
-    title: rawName,
-    icon: "assets/avatar.png",
-  };
+  const [title, value, icon] = parts;
 
   return {
-    title: meta.title,
-    icon: meta.icon,
+    title,
+    icon: icon || "assets/avatar.png",
     value,
   };
 }
@@ -115,18 +68,13 @@ function parseSocialLine(line) {
   const parts = line.split("|").map((part) => part.trim()).filter(Boolean);
   if (parts.length < 3) return null;
 
-  const [rawKey, name, url, subtitle] = parts;
-  const meta = SOCIAL_META[normalizeKey(rawKey)] || {
-    title: name,
-    icon: "assets/avatar.png",
-  };
+  const [name, url, subtitle, icon] = parts;
 
   return {
-    title: meta.title,
-    icon: meta.icon,
     name,
     url,
     subtitle: subtitle || "Nagashita Fuyuki",
+    icon: icon || "assets/avatar.png",
   };
 }
 
@@ -186,9 +134,9 @@ function renderSocial(lines) {
 
       const icon = node.querySelector(".social-icon");
       icon.src = social.icon;
-      icon.alt = social.title;
+      icon.alt = social.name;
 
-      node.querySelector(".social-name").textContent = social.name || social.title;
+      node.querySelector(".social-name").textContent = social.name;
       node.querySelector(".social-handle").textContent = social.subtitle;
 
       socialGrid.appendChild(node);

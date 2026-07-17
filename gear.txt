@@ -1,4 +1,4 @@
-Mouse: Attack shark x11
-Keyboard: DareU EK87 Black (Multi-LED)
-Headphone: Moxpad x3
-Gamepad: Gamesir Nova 2 Lite
+Mouse | Attack shark x11 | assets/gear/mouse.png
+Keyboard | DareU EK87 Black (Multi-LED) | assets/gear/keyboard.png
+Headphone | Moxpad x3 | assets/gear/headphone.png
+Gamepad | Gamesir Nova 2 Lite | assets/gear/gamepad.png

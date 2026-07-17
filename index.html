@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nagashita Fuyuki</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-grid"></div>
+
+    <main class="content">
+      <section class="profile-hero glass-panel">
+        <div class="profile-main">
+          <div class="avatar-frame">
+            <img src="assets/avatar.png" alt="Avatar" class="avatar-img" />
+          </div>
+
+          <div class="profile-copy">
+            <p class="eyebrow">PROFILE</p>
+            <h1>Nagashita Fuyuki</h1>
+            <p class="bio">Gaming &amp; Coding Enthusiast</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LINKS</p>
+            <h2>Mạng xã hội</h2>
+          </div>
+          <span class="section-tag">SOCIAL LIST</span>
+        </div>
+
+        <div class="social-grid" id="social-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">GAMES</p>
+            <h2>Danh sách trò chơi</h2>
+          </div>
+          <span class="section-tag">GAMES LIST</span>
+        </div>
+
+        <div class="games-grid" id="games-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">GEAR</p>
+            <h2>Gaming Gear</h2>
+          </div>
+          <span class="section-tag">GEAR LIST</span>
+        </div>
+
+        <div class="gear-grid" id="gear-grid" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <template id="game-card-template">
+    <article class="game-card glass-panel">
+      <div class="card-index"></div>
+      <div class="card-head">
+        <img class="game-icon" alt="" />
+        <div class="game-copy">
+          <h3 class="game-title"></h3>
+          <p class="game-server"></p>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-foot">
+        <span class="card-label">UID</span>
+        <button class="uid-copy" type="button" title="Copy UID">
+          <span class="uid-value"></span>
+          <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1Zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H10V7h9v14Z" />
+          </svg>
+        </button>
+      </div>
+    </article>
+  </template>
+
+  <template id="social-card-template">
+    <a class="social-card glass-panel" target="_blank" rel="noreferrer">
+      <img class="social-icon" alt="" />
+      <span class="social-name"></span>
+      <small class="social-handle"></small>
+    </a>
+  </template>
+
+  <template id="gear-card-template">
+    <article class="gear-card glass-panel">
+      <div class="gear-head">
+        <img class="gear-icon" alt="" />
+        <div class="gear-copy">
+          <h3 class="gear-title"></h3>
+          <p class="gear-value"></p>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

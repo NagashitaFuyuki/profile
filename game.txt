@@ -1,5 +1,3 @@
-tên trò chơi - server - uid
----------------------------------
 Strinova - APAC - Fuyuki/2338894
 GI - ASIA - 821913008
 HSR - ASIA - 802186409

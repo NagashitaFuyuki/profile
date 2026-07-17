@@ -24,7 +24,7 @@ const SOCIAL_META = {
   discord: { title: "Discord", icon: "assets/social/discord.png" },
 };
 
-const PROFILE_FALLBACK = [
+const GAME_FALLBACK = [
   "Strinova - APAC - Fuyuki/2338894",
   "GI - ASIA - 821913008",
   "HSR - ASIA - 802186409",
@@ -215,15 +215,15 @@ function renderGear(lines) {
     });
 }
 
-async function loadProfile() {
+async function loadGame() {
   try {
-    const response = await fetch("profile.txt", { cache: "no-store" });
-    if (!response.ok) throw new Error("profile.txt not available");
+    const response = await fetch("game.txt", { cache: "no-store" });
+    if (!response.ok) throw new Error("game.txt not available");
     const text = await response.text();
     const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-    renderGames(lines.length ? lines : PROFILE_FALLBACK);
+    renderGames(lines.length ? lines : GAME_FALLBACK);
   } catch {
-    renderGames(PROFILE_FALLBACK);
+    renderGames(GAME_FALLBACK);
   }
 }
 
@@ -252,5 +252,5 @@ async function loadGear() {
 }
 
 loadSocial();
-loadProfile();
+loadGame();
 loadGear();

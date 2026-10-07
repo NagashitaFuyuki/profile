@@ -1,4 +1,4 @@
 Mouse | Attack shark x11 | assets/gear/mouse.png
-Keyboard | AULA S75 Pro Gradient Black Gray Pink - Caramel Latte Switch V2 (Linear)  | assets/gear/keyboard.png
+Keyboard | AULA S75 Pro Gradient Black Gray Pink - Caramel Latte Switch V2 (Linear)  | assets/gear/aula.png
 Headphone | Moxpad x3 | assets/gear/headphone.png
 Gamepad | Gamesir Nova 2 Lite | assets/gear/gamepad.png
